@@ -96,7 +96,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="99" red="cc" type="rgb"/>
             </Property>
-            <Property name="actionCommand" type="java.lang.String" value=""/>
             <Property name="label" type="java.lang.String" value="Sign in"/>
           </Properties>
           <Events>

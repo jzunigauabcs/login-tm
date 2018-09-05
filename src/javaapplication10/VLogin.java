@@ -109,6 +109,7 @@ public class VLogin extends javax.swing.JFrame {
         String USERNAME = "root";
         String PASSWORD = "root"; 
         String DB = "login";
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
