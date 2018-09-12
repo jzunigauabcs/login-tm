@@ -5,6 +5,7 @@
  */
 package javaapplication10;
 
+import com.uabcs.db.DBConnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -112,14 +113,9 @@ public class VLogin extends javax.swing.JFrame {
             String email = jtfEmail.getText();
             String password = String.valueOf(jpfPassword.getPassword());
             
-            String URL = "jdbc:mysql://127.0.0.1:3306/";
-            String USERNAME = "root";
-            String PASSWORD = "root";
-            String DB = "login?useSSL=false&serverTimezone=UTC";
+            DBConnection dbConn = new DBConnection();
+            Connection connection = dbConn.getConnection();
             
-            Connection connection;
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(URL + DB, USERNAME, PASSWORD);
             String query = "SELECT COUNT(*) AS user FROM user" +
                     " WHERE email = '" + email + "' AND password = sha1('" + password +"')";
             Statement stm = connection.createStatement();
